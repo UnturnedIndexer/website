@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner"
+import { Navbar } from "@/components/component/navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -27,7 +28,12 @@ export default function RootLayout({
           inter.className
         )}
       >
-        {children}
+        <Navbar />
+
+        <div className="flex-1">
+          {children}
+        </div>
+
         <Toaster />
       </body>
     </html>
